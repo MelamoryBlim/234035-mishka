@@ -1,6 +1,6 @@
 .catalog-item {
   margin: 30px;
-  border: 1px solid rgba(236, 236, 236, 1);
+  border: 1px solid @catalog-item-border;
   padding-bottom: 20px;
 }
 
@@ -10,7 +10,7 @@
   font-weight: bold;
   line-height: 24px;
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
+  color: @catalog-item-name;
   margin: 30px 30px 10px 30px;
 }
 
@@ -22,7 +22,7 @@
   margin-right: 30px;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px solid @catalog-desc-border;
 }
 
 .catalog-item__price {
