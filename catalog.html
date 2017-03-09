@@ -4,19 +4,22 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="description" content="Личный проект HTML Academy">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
+      <h1 class="page-header__hidden">Интернет-магазин "Мишка"</h1>
       <div class="page-header__logo">
-        <a href="index.html"><img src="#" alt="Logotype"></a>
+        <a href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+        </a>
       </div>
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toogle" type="button" name="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
+          <ul class="main-nav__list">
             <li><a class="main-nav__item" href="#">Каталог товаров</a></li>
-            <li><a class="main-nav__item" href="#">Вязание на заказ</a></li>
+            <li><a class="main-nav__item" href="form.html">Вязание на заказ</a></li>
             <li><a class="main-nav__item" href="#">Поиск по сайту</a></li>
             <li><a class="main-nav__item" href="#">Корзина: <span>пока пуста</span></a></li>
           </ul>
@@ -24,34 +27,36 @@
       </nav>
     </header>
     <main>
-      <h2 class="name-page">Каталог товаров</h2>
-      <section class="catalog-items">
+      <section class="content">
+        <h2 class="content__title">Каталог товаров</h2>
+      </section>
+      <section class="catalog">
         <article class="catalog-item">
-          <a href="#"><img src="#" alt="Изображение товара"></a>
-          <a href="#"><div class="catalog-item__name">Зайчик-попрыгайчик</div></a>
+          <a href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+          <a class="catalog-item__name" href="#">Зайчик-попрыгайчик</a>
           <div class="catalog-item__desc">Рост 30 см, вес 200 г</div>
-          <div class="catalog-item__price">1200 руб.</div>
+          <span class="catalog-item__price">1 200 руб.</span>
           <a class="catalog-item__basket" href="#">Корзина</a>
         </article>
         <article class="catalog-item">
-          <a href="#"><img src="#" alt="Изображение товар"></a>
-          <a href="#"><div class="catalog-item__name">Корзинка для белья</div></a>
+          <a href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+          <a class="catalog-item__name" href="#">Корзинка для белья</a>
           <div class="catalog-item__desc">Диаметр 15 см, высота 10 см</div>
-          <div class="catalog-item__price">690 руб.</div>
+          <span class="catalog-item__price">690 руб.</span>
           <a class="catalog-item__basket" href="#">Корзина</a>
         </article>
         <article class="catalog-item">
-          <a href="#"><img src="#" alt="Изображение товара"></a>
-          <a href="#"><div class="catalog-item__name">Большая корзинка для игрушек</div></a>
+          <a href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+          <a class="catalog-item__name" href="#">Большая корзинка для игрушек</a>
           <div class="catalog-item__desc">Диаметр 30 см, высота 30 см</div>
-          <div class="catalog-item__price">1500 руб.</div>
+          <span class="catalog-item__price">1 500 руб.</span>
           <a class="catalog-item__basket" href="#">Корзина</a>
         </article>
       </section>
       <section class="video">
         <article class="video-item">
           <h2 class="video__title">Процесс производства</h2>
-          <img src="#" alt="видео">
+          <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="видео">
           <p class="video__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="btn" href="#">Сделать заказ</a>
         </article>
