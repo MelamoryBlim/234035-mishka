@@ -15,16 +15,16 @@
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
         </a>
       </div>
+      <button class="main-nav__toogle" type="button" title="Меню">Меню</button>
       <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toogle" type="button" name="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li><a class="main-nav__item" href="catalog.html">Каталог товаров</a></li>
-            <li><a class="main-nav__item" href="#">Вязание на заказ</a></li>
-            <li><a class="main-nav__item" href="#">Поиск по сайту</a></li>
-            <li><a class="main-nav__item" href="#">Корзина: <span>пока пуста</span></a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--form" href="#">Вязание на заказ</a></li>
+        </ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--basket" href="#">Корзина: <span>пока пуста</span></a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -95,13 +95,20 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="social">
-        <a class="social-btn social-btn--in" href="#"></a>
-        <a class="social-btn social-btn--fb" href="#"></a>
-        <a class="social-btn social-btn--tw" href="#"></a>
+      <div class="page-footer__logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+      </div>
+      <div class="page__social">
+        <a class="social-btn social-btn--in" href="#">1</a>
+        <a class="social-btn social-btn--fb" href="#">2</a>
+        <a class="social-btn social-btn--tw" href="#">3</a>
       </div>
       <div class="page-footer__dev">
-        <span>Разработано<a href="#">HTML Academy</a></span>
+        <span>Разработано
+          <a href="#">
+            <img src="img/logo-htmlacademy.svg" width="" height="" alt="htmlacademylogo">
+          </a>
+        </span>
       </div>
     </footer>
   </body>

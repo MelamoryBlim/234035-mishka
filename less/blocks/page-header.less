@@ -1,11 +1,16 @@
 .page-header {
-  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: @bgcolor;
 }
 
 .page-header__logo {
-    display: inline-block;
     text-align: center;
-
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid @menu-item-border;
+    border-bottom: 1px solid @menu-item-border;
     &:hover {
       opacity: 0.6;
       cursor: pointer;
@@ -13,4 +18,24 @@
     &:active {
       opacity: 0.3;
     }
+}
+
+@media @tablet-width {
+  .page-header {
+    border-bottom: 1px solid @menu-item-border;
+  }
+  .page-header__logo {
+    position: absolute;
+    z-index: 10;
+    border: 0;
+    margin-left: 50px;
+  }
+}
+
+@media @desktop-width {
+  .page-header__logo {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
 }

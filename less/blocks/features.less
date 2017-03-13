@@ -1,8 +1,15 @@
 .features {
   padding: 30px;
+  padding-top: 35px;
+}
+
+.features__wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .features__title {
+  margin: 0;
   font-size: 25px;
   font-weight: bold;
   line-height: 30px;
@@ -14,10 +21,14 @@
   line-height: 20px;
   color: @feature-week;
   text-transform: uppercase;
+  & br {
+    display: none;
+  }
 }
 
 .features__table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 .features__col {
@@ -28,6 +39,7 @@
 .features__image {
   padding-top: 30px;
   padding-bottom: 30px;
+  // border: 1px solid red;
 }
 
 .features__ruble {
@@ -37,4 +49,47 @@
   text-align: center;
   margin-bottom: 30px;
   color: @btn-color;
+}
+
+@media @tablet-width {
+  .features {
+    padding: 50px;
+    padding-top: 55px;
+  }
+  .features__wrap {
+    width: 50%;
+    // border: 1px solid red;
+    position: relative;
+  }
+  .features__title-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .features__week {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 17px;
+    margin-right: 28px;
+    & br {
+      display: block;
+    }
+  }
+  .features__image {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media @desktop-width {
+  .features__title-wrap {
+    justify-content: flex-start;
+  }
+  .features__week {
+    order: -1;
+  }
 }

@@ -1,16 +1,30 @@
+.main-nav {
+  width: 100%;
+  position: absolute;
+  &--closed {
+    display: none;
+  }
+}
+
 .main-nav__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: @bgcolor;
 }
 
-.main-nav__item {
+.main-nav__user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: @bgcolor;
+}
+
+.main-nav__link {
   display: block;
-  border-top: 1px solid @menu-item-border;
   border-bottom: 1px solid @menu-item-border;
-  text-align: center;
   text-decoration: none;
-  padding: 30px 0;
+  padding: 30px 30px 30px 76px;
   color: @link;
   font-size: 17px;
   font-weight: bold;
@@ -24,7 +38,103 @@
 }
 
 .main-nav__toogle {
-  float: right;
-  margin-top: -40px;
-  margin-right: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  background-color: @bgcolor;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 20px;
+    height: 14px;
+    background: url("../img/icon-menu-open.svg") no-repeat;
+  }
+}
+
+@media @tablet-width {
+  .main-nav {
+    position: static;
+    &--closed {
+      display: block;
+    }
+  }
+  .main-nav__toogle {
+    display: none;
+  }
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    background-color: transparent;
+  }
+  .main-nav__user-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  .main-nav__link {
+    border: 0;
+  }
+  .main-nav__link--catalog {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 50px;
+    padding: 25px 0;
+    width: 167px;
+
+  }
+  .main-nav__link--form {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 24px;
+    padding: 25px 0;
+    width: 167px;
+  }
+  .main-nav__link--search {
+    font-size: 0;
+    width: 80px;
+    border-left: 1px solid @menu-item-border;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-nav__link--basket {
+    padding-left: 80px;
+    padding-right: 50px;
+    border-left: 1px solid @menu-item-border;
+  }
+}
+
+@media @desktop-width {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav__list {
+    position: static;
+  }
+  .main-nav__link--catalog {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    padding: 30px 35px 30px 50px;
+    border-right: 1px solid @menu-item-border;
+  }
+  .main-nav__link--form {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    padding: 30px 35px;
+  }
 }
