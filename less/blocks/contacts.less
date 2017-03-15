@@ -1,16 +1,38 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .contacts__title {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
-  padding: 30px;
+  .container();
 }
 
-.contacts__email {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
+.contacts__email,
 .contacts__address {
-  padding-left: 30px;
-  padding-right: 30px;
+  display: flex;
+  justify-content: flex-start;
+  .container();
+  margin-top: 30px;
+  margin-bottom: 30px;
+  & span {
+    margin-right: 10px;
+  }
+}
+
+.contacts__link {
+  text-decoration: none;
+  border-bottom: 1px solid @link-border;
+  color: @link;
+}
+
+.contacts__map {
+  min-height: 457px;
+  & img {
+    width: 100%;
+    min-height: 457px;
+    overflow-y: hidden;
+  }
 }

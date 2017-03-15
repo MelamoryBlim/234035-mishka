@@ -1,5 +1,5 @@
 .features {
-  padding: 30px;
+  .container();
   padding-top: 35px;
 }
 
@@ -37,9 +37,12 @@
 }
 
 .features__image {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  // border: 1px solid red;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .features__ruble {
@@ -51,6 +54,12 @@
   color: @btn-color;
 }
 
+.features__price {
+  display: flex;
+  flex-direction: column;
+
+}
+
 @media @tablet-width {
   .features {
     padding: 50px;
@@ -58,7 +67,6 @@
   }
   .features__wrap {
     width: 50%;
-    // border: 1px solid red;
     position: relative;
   }
   .features__title-wrap {
@@ -82,6 +90,11 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    & img {
+      width: 100%;
+      height: 404px;
+      overflow-x: hidden;
+    }
   }
 }
 

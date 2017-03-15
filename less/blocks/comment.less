@@ -1,5 +1,8 @@
 .comment {
   min-height: 457px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .comment__title {
   font-size: 25px;
@@ -8,7 +11,12 @@
 }
 
 .comment__text {
+  font-size: 14px;
   line-height: 30px;
+}
+
+.comment__user {
+  margin-bottom: 30px;
 }
 
 .comment__author {
@@ -24,30 +32,58 @@
   display: block;
 }
 
+.comment__slider {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
 .comment__btn {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-top: 30px;
+  min-height: 50px;
   border: 1px solid @comment-btn-border;
+  flex-grow: 1;
+  font-size: 0;
+  position: relative;
+}
+
+.comment__btn--prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  width: 51px;
+  height: 26px;
+  background: url("../img/icon-left-arrow.svg") no-repeat;
+}
+
+.comment__btn--next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  transform: translateY(-50%);
+  width: 51px;
+  height: 26px;
+  background: url("../img/icon-right-arrow.svg") no-repeat;
 }
 
 @media @tablet-width {
   .comment {
     background: url("../img/review@1x.jpg") no-repeat;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .comment__title {
     order: -2;
-    // border: 1px solid red;
     align-self: flex-start;
   }
   .comment__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // border: 1px solid red;
   }
   .comment__btn {
     order: -1;
