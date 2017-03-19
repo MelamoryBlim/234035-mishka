@@ -26,22 +26,22 @@ var overlay = document.querySelector(".modal__overlay");
 
 btn__order.addEventListener("click", function (event) {
   event.preventDefault();
-	popup.classList.add("modal__order--show");
-	overlay.classList.add("modal__overlay--show");
+  popup.classList.add("modal__order--show");
+  overlay.classList.add("modal__overlay--show");
 });
 
 overlay.addEventListener("click", function (event) {
-	popup.classList.remove("modal__order--show");
-	overlay.classList.remove("modal__overlay--show");
+  popup.classList.remove("modal__order--show");
+  overlay.classList.remove("modal__overlay--show");
 });
 
 window.addEventListener("keydown", function (event) {
-	if (event.keyCode === 27) {
-		if (popup.classList.contains("modal__order--show")) {
-			popup.classList.remove("modal__order--show");
-			overlay.classList.remove("modal__overlay--show");
-		}
-	}
+  if (event.keyCode === 27) {
+    if (popup.classList.contains("modal__order--show")) {
+      popup.classList.remove("modal__order--show");
+      overlay.classList.remove("modal__overlay--show");
+    }
+  }
 });
 
 //карта с меткой макета
