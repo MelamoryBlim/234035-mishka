@@ -29,6 +29,17 @@
     </header>
     <main>
       <section class="content">
+        <ul class="content__nav">
+          <li class="content__nav-item content__nav-item--catalog">
+            <a class="content__nav-link" href="catalog.html">Новые поступления</a>
+          </li>
+          <li class="content__nav-item content__nav-item--sale">
+            <a class="content__nav-link" href="#">Распродажа</a>
+          </li>
+          <li class="content__nav-item">
+            <span class="content__nav-delivery">Бесплатная доставка по России</span>
+          </li>
+        </ul>
         <h2 class="content__title">Каталог товаров</h2>
       </section>
       <section class="catalog">
@@ -79,7 +90,7 @@
           </div>
           <div class="video__desc-wrap">
             <p class="video__desc-text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="btn video__btn" href="#">Сделать заказ</a>
+            <a class="btn video__btn btn__order" href="#">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -104,17 +115,20 @@
         </div>
       </div>
     </footer>
-    <div class="modal-order">
-      <form class="modal-add" action="https://echo.htmlacademy.ru/">
-        <h2 class="modal-order__title">Добавить в корзину</h2>
-        <span class="modal-order__select">Выберите размер:</span>
-        <fieldset class="modal-order__group">
-          <label class="modal-order__lable">S<input class="modal-order__size" type="radio" id="modal-1" name="size" checked></label>
-          <label class="modal-order__lable">M<input class="modal-order__size" type="radio" id="modal-2" name="size"></label>
-          <label class="modal-order__lable">L<input class="modal-order__size" type="radio" id="modal-3" name="size"></label>
-        </fieldset>
-        <button class="btn btn--modal" type="submit">Добавить</button>
-      </form>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__order">
+        <form class="modal__add" action="https://echo.htmlacademy.ru/">
+          <h2 class="modal__order-title">Добавить в корзину</h2>
+          <span class="modal__order-select">Выберите размер:</span>
+          <div class="modal__order-group">
+            <label class="modal__order-lable">S<input class="modal__order-size" type="radio" id="modal-1" name="size" checked></label>
+            <label class="modal__order-lable">M<input class="modal__order-size" type="radio" id="modal-2" name="size"></label>
+            <label class="modal__order-lable">L<input class="modal__order-size" type="radio" id="modal-3" name="size"></label>
+          </div>
+          <button class="btn btn--modal" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

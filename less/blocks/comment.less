@@ -1,19 +1,31 @@
 .comment {
-  min-height: 457px;
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
+  .container();
+  margin-bottom: 80px;
+}
+
+.comment__inner {
+  margin-bottom: 40px;
 }
 
 .comment__title {
   font-size: 25px;
   font-weight: bold;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+.comment__item {
+  margin-bottom: 30px;
 }
 
 .comment__text {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 30px;
+  color: @comment-text;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .comment__user {
@@ -27,70 +39,154 @@
   font-style: normal;
 }
 
-.comment__profile {
-  color: @comment-link-profile;
-  text-decoration: none;
+.comment__link {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
   display: block;
+  color: @link;
+  text-decoration: none;
 }
 
 .comment__slider {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.comment__btn {
-  min-height: 50px;
-  border: 1px solid @comment-btn-border;
-  flex-grow: 1;
-  font-size: 0;
   position: relative;
+  margin-bottom: 38px;
+  border: solid 1px @comment-btn-border;
+  font-size: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    height: 50px;
+    border-right: 1px solid @comment-btn-border;
+  }
 }
 
-.comment__btn--prev::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translateY(-50%);
-  width: 51px;
-  height: 26px;
-  background: url("../img/icon-left-arrow.svg") no-repeat;
-}
+.comment__slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  position: relative;
+  font-size: 0;
 
-.comment__btn--next::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 30%;
-  transform: translateY(-50%);
-  width: 51px;
-  height: 26px;
-  background: url("../img/icon-right-arrow.svg") no-repeat;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--prev::after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 26px;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: @link;
+    background: url("../img/icon-left-arrow.svg") no-repeat;
+  }
+
+  &--next::after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 26px;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    background-color: @link;
+    background: url("../img/icon-right-arrow.svg") no-repeat;
+  }
 }
 
 @media @tablet-width {
   .comment {
-    background: url("../img/review@1x.jpg") no-repeat;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 457px;
+    margin-bottom: 120px;
+  }
+
+  .comment__inner {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 30px;
   }
 
   .comment__title {
-    order: -2;
-    align-self: flex-start;
+    font-size: 43px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 45px;
+    order: -5;
   }
 
   .comment__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .comment__text {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  .comment__author {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  .comment__slider {
+    width: 175px;
+    align-self: flex-end;
+    border: none;
+
+    &::after {
+      display: none;
+    }
   }
 
   .comment__btn {
-    order: -1;
+    order: -4;
+    width: 175px;
     align-self: flex-start;
+  }
+}
+
+@media @desktop-width {
+  .comment {
+    background-position: 50px 0;
+    background-size: contain;
+    margin-bottom: 150px;
+  }
+
+  .comment__item {
+    padding-left: 175/1050*100%;
+  }
+
+  .comment__title {
+    font-size: 53px;
+    font-weight: bold;
+    line-height: 57px;
+    padding-left: 175/1050*100%;
   }
 }

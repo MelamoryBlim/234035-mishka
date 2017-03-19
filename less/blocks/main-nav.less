@@ -39,6 +39,7 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
+  position: relative;
 
   &:hover {
     color: @link-hover;
@@ -47,6 +48,28 @@
   &:active {
     color: @link-active;
   }
+}
+
+.main-nav__link--search::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 30px;
+  width: 18px;
+  height: 19px;
+  background: url("../img/icon-search.svg") no-repeat;
+  opacity: 0.2;
+}
+
+.main-nav__link--basket::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 30px;
+  width: 21px;
+  height: 18px;
+  background: url("../img/icon-cart.svg") no-repeat;
+  opacity: 0.2;
 }
 
 .main-nav__toggle {
@@ -107,6 +130,7 @@
     position: absolute;
     top: 100%;
     background-color: transparent;
+    z-index: 10;
   }
 
   .main-nav__user-list {
