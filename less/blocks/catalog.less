@@ -1,5 +1,10 @@
+.catalog {
+  margin-bottom: 30px;
+  .container() ;
+}
+
 .catalog-item {
-  margin: 30px;
+  margin-bottom: 30px;
   border: 1px solid @catalog-item-border;
   padding-bottom: 20px;
 }
@@ -30,4 +35,35 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 24px;
+}
+
+@media @tablet-width {
+  .catalog-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .catalog-item__photo {
+    width: 50%;
+  }
+}
+
+@media @desktop-width {
+  .catalog__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .catalog-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 315px;
+    min-height: 658px;
+  }
+
+  .catalog-item__photo {
+    width: 100%;
+  }
 }

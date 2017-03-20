@@ -1,22 +1,140 @@
 .about {
-  padding: 30px;
+  .container();
+  margin-bottom: 50px;
 }
 
 .about__title {
   font-size: 25px;
   font-weight: bold;
   line-height: 30px;
+  margin: 0;
 }
 
 .about__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 0;
 }
 
 .about__item {
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
-  padding-top: 10px;
+  padding-top: 50px;
+  position: relative;
+  margin-top: 50px;
+
+  &--materials::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 38px;
+    background: url("../img/icon-feature-1.svg") no-repeat;
+  }
+
+  &--style::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47px;
+    height: 27px;
+    background: url("../img/icon-feature-3.svg") no-repeat;
+  }
+
+  &--like::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 27px;
+    background: url("../img/icon-feature-5.svg") no-repeat;
+  }
+
+  &--manual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 34px;
+    background: url("../img/icon-feature-2.svg") no-repeat;
+  }
+
+  &--support::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 23px;
+    background: url("../img/icon-feature-4.svg") no-repeat;
+  }
+
+  &--box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 32px;
+    background: url("../img/icon-feature-6.svg") no-repeat;
+  }
+}
+
+@media @tablet-width {
+  .about {
+    margin-bottom: 80px;
+  }
+
+  .about__title {
+    font-size: 43px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+  }
+
+  .about__item:nth-child(1) {
+    order: -8;
+  }
+
+  .about__item:nth-child(4) {
+    order: -7;
+  }
+
+  .about__item:nth-child(2) {
+    order: -6;
+  }
+
+  .about__item:nth-child(5) {
+    order: -5;
+  }
+}
+
+@media @desktop-width {
+  .about__title {
+    font-size: 53px;
+    font-weight: bold;
+    line-height: 57px;
+  }
+
+  .about {
+    padding: 0 225/1150*100%;
+  }
 }

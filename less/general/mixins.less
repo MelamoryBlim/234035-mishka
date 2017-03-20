@@ -1,0 +1,13 @@
+// padding: 0 9.375%; //30px 320
+// padding: 0 6.51%; //50px 768
+// padding: 0 4.347%; //50px 1150
+
+.container() {
+  padding: 0 30/320*100%;
+  @media @tablet-width {
+    padding: 0 50/768*100%;
+  }
+  @media @desktop-width {
+    padding: 0 50/1150*100%;
+  }
+}
