@@ -3,14 +3,14 @@
   .container();
 }
 
-.video__inner {
+.video__inner-wrap {
   border: 1px solid @video-border;
   box-sizing: border-box;
 }
 
 .video__title-wrap {
   display: flex;
-  padding: 25px;
+  padding: 20px 30px;
   align-items: center;
   box-sizing: border-box;
 }
@@ -55,16 +55,16 @@
 }
 
 .video__desc-wrap {
-  padding: 0 25px;
+  padding-left: 32px;
+  padding-right: 35px;
 }
 
 .video__desc-text {
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0;
   color: @video-desc;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 
@@ -73,9 +73,14 @@
 }
 
 @media @tablet-width {
-  .video__inner {
+  .video {
+    margin-bottom: 70px;
+  }
+
+  .video__inner-wrap {
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
   }
 
   .video__block {
@@ -85,6 +90,16 @@
     background-image: url("../img/video-mobile@1x.jpg");
     background-size: 658px; // no img for tablet 768px-50-50
     background-position: center;
+    margin-bottom: 15px;
+  }
+
+  .video__title-img {
+    margin-right: 30px;
+  }
+
+  .video__desc-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .video__title-text {
@@ -97,42 +112,49 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 30px;
+    margin-top: 5px;
+  }
+
+  .video__btn {
+    margin-top: 10px;
+    margin-bottom: 40px;
   }
 }
 
 @media @desktop-width {
-  .video {
-    position: relative;
+  .video__inner {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 100px;
-    box-sizing: border-box;
+    margin-bottom: 110px;
+    position: relative;
   }
 
-  .video__inner {
+  .video__inner-wrap {
     min-height: 455px;
-    width: 40%;
-    padding: 0 60px;
+    width: 35%;
+    padding-left: 75px;
+    padding-right: 60px;
     box-sizing: border-box;
-  }
 
-  .video__inner:hover {
-    box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.1);
-  }
+    &:hover {
+      box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.1);
+    }
 
-  .video__inner:active {
-    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
+    &:active {
+      box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .video__title-text {
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 28px;
   }
 
   .video__block {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 65%;
     height: 455px;
   }
 
