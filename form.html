@@ -12,7 +12,11 @@
       <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
       <div class="page-header__logo">
         <a href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+          </picture>
         </a>
       </div>
       <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button" title="Меню">Меню</button>
@@ -146,7 +150,7 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__item page-footer__item--logo">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+          <img src="img/logo-footer.svg" width="102" height="34" alt="Logotype">
         </div>
         <div class="page-footer__item page-footer__item--social">
           <div class="page-footer__social-wrap">
@@ -158,7 +162,7 @@
         <div class="page-footer__item page-footer__item--dev">
           <a class="page-footer__dev-link" href="https://htmlacademy.ru/">
             <span>Разработано</span>
-            <img src="img/logo-htmlacademy.svg" width="" height="" alt="htmlacademylogo">
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademylogo">
           </a>
         </div>
       </div>

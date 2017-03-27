@@ -1,6 +1,8 @@
 .main-nav {
-  width: 100%;
   position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: 1px;
 
   &--closed {
     display: none;
@@ -34,12 +36,13 @@
   display: block;
   border-bottom: 1px solid @menu-item-border;
   text-decoration: none;
-  padding: 30px 30px 30px 76px;
+  padding: 27px 27px 27px 76px;
   color: @link;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
   position: relative;
+  margin: 0;
 
   &:hover {
     color: @link-hover;
@@ -114,6 +117,7 @@
 @media @tablet-width {
   .main-nav {
     position: static;
+    margin-top: 0;
 
     &--closed {
       display: block;
@@ -127,8 +131,10 @@
   .main-nav__list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: absolute;
     top: 100%;
+    left: 50px;
     background-color: transparent;
     z-index: 10;
   }
@@ -137,13 +143,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 24px;
   }
 
   .main-nav__link {
-    border: 0;
+    border: none;
   }
 
   .main-nav__link--catalog {
@@ -151,29 +154,30 @@
     font-weight: bold;
     line-height: 24px;
     margin-left: 50px;
-    padding: 22px 0;
+    padding: 18px 0;
     width: 167px;
+    margin: 0;
   }
 
   .main-nav__link--form {
     font-size: 15px;
     font-weight: bold;
     line-height: 24px;
-    padding: 22px 0;
+    padding: 18px 0;
     width: 167px;
   }
 
   .main-nav__link--search {
     font-size: 0;
-    width: 85px;
+    width: 82px;
     border-left: 1px solid @menu-item-border;
     padding-left: 0;
     padding-right: 0;
+    padding: 32px 0;
   }
 
   .main-nav__link--basket {
-    padding-left: 80px;
-    padding-right: 50px;
+    padding: 32px 50px 32px 83px;
     border-left: 1px solid @menu-item-border;
   }
 }
@@ -193,7 +197,7 @@
     font-weight: bold;
     line-height: 24px;
     margin: 0;
-    padding: 30px 18px 30px 50px;
+    padding: 32px 18px 32px 50px;
     border-right: 1px solid @menu-item-border;
   }
 

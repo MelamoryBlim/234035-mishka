@@ -1,6 +1,20 @@
 .about {
-  .container();
   margin-bottom: 50px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 7px;
+    display: block;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    margin-bottom: 27px;
+  }
+}
+
+.about__inner {
+  .container();
 }
 
 .about__title {
@@ -89,6 +103,11 @@
 @media @tablet-width {
   .about {
     margin-bottom: 60px;
+
+    &::before {
+      height: 17px;
+      margin-bottom: 50px;
+    }
   }
 
   .about__title {
@@ -132,6 +151,14 @@
 @media @desktop-width {
   .about {
     margin-bottom: 65px;
+
+    &::before {
+      height: 23px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .about__inner {
     padding: 0 225/1150*100%;
   }
 

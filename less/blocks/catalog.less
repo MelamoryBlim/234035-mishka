@@ -74,12 +74,13 @@
     height: 18px;
     background: url("../img/icon-cart.svg") no-repeat;
     transform: translateY(-50%);
+    opacity: 0.2;
   }
 }
 
 @media @tablet-width {
   .catalog {
-    padding-top: 40px;
+    padding-top: 35px;
   }
 
   .catalog-item {
@@ -90,9 +91,8 @@
 
   .catalog-item__photo {
     display: flex;
-    justify-content: center;
-    overflow: hidden;
-    max-width: 50%;
+    justify-content: flex-start;
+    width: 50%;
 
     & img {
       width: auto;
@@ -129,13 +129,11 @@
   .catalog-item__desc-wrap {
     padding: 20px 6px;
   }
-
-
 }
 
 @media @desktop-width {
   .catalog {
-    padding-top: 88px;
+    padding-top: 30px;
   }
 
   .catalog__inner {
@@ -149,7 +147,7 @@
     flex-direction: column;
     width: 315px;
     min-height: 660px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     &:hover {
       box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.1);
@@ -164,8 +162,12 @@
     margin-right: 30px;
   }
 
+  .catalog-item__param {
+    margin-bottom: 0;
+  }
+
   .catalog-item__photo {
-    max-width: 100%;
+    width: 100%;
 
     & img {
       min-height: 460px;

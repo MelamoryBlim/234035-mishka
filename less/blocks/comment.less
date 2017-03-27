@@ -1,6 +1,6 @@
 .comment {
   .container();
-  margin-bottom: 82px;
+  margin-bottom: 45px;
 }
 
 .comment__inner {
@@ -110,11 +110,16 @@
 
 @media @tablet-width {
   .comment {
+    background-color: @bgcolor;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 457px;
-    margin-bottom: 135px;
+    margin-bottom: 65px;
+
+    @media @retina-tablet {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .comment__inner {
@@ -177,7 +182,11 @@
   .comment {
     background-position: 50px 0;
     background-size: contain;
-    margin-bottom: 160px;
+    margin-bottom: 70px;
+
+    @media @retina-desktop {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .comment__inner {

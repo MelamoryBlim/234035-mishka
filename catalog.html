@@ -12,7 +12,11 @@
       <h1 class="visually-hidden">Интернет-магазин "Мишка"</h1>
       <div class="page-header__logo">
         <a href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+          </picture>
         </a>
       </div>
       <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs" type="button" title="Меню">Меню</button>
@@ -44,45 +48,63 @@
       </section>
       <section class="catalog">
         <div class="catalog__inner">
-          <article class="catalog-item">
+          <div class="catalog-item">
             <div class="catalog-item__photo">
-              <a href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
+                  <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="260" height="195" alt="Товар каталога">
+                </picture>
+              </a>
             </div>
             <div class="catalog-item__desc">
               <a class="catalog-item__name" href="#">Зайчик-попрыгайчик</a>
               <b class="catalog-item__param">Рост 30 см, вес 200 г</b>
               <div class="catalog-item__desc-wrap">
                 <span class="catalog-item__price">1 200 руб.</span>
-                <a class="catalog-item__basket" href="#">Корзина</a>
+                <a class="catalog-item__basket btn__order" href="#">Корзина</a>
               </div>
             </div>
-          </article>
-          <article class="catalog-item">
+          </div>
+          <div class="catalog-item">
             <div class="catalog-item__photo">
-              <a href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
+                  <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="260" height="195" alt="Товар каталога">
+                </picture>
+              </a>
             </div>
             <div class="catalog-item__desc">
               <a class="catalog-item__name" href="#">Корзинка для белья</a>
               <b class="catalog-item__param">Диаметр 15 см, высота 10 см</b>
               <div class="catalog-item__desc-wrap">
                 <span class="catalog-item__price">690 руб.</span>
-                <a class="catalog-item__basket" href="#">Корзина</a>
+                <a class="catalog-item__basket btn__order" href="#">Корзина</a>
               </div>
             </div>
-          </article>
-          <article class="catalog-item">
+          </div>
+          <div class="catalog-item">
             <div class="catalog-item__photo">
-              <a href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Изображение товара"></a>
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
+                  <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="260" height="195" alt="Товар каталога">
+                </picture>
+              </a>
             </div>
             <div class="catalog-item__desc">
               <a class="catalog-item__name" href="#">Большая корзинка для игрушек</a>
               <b class="catalog-item__param">Диаметр 30 см, высота 30 см</b>
               <div class="catalog-item__desc-wrap">
                 <span class="catalog-item__price">1 500 руб.</span>
-                <a class="catalog-item__basket" href="#">Корзина</a>
+                <a class="catalog-item__basket btn__order" href="#">Корзина</a>
               </div>
             </div>
-          </article>
+          </div>
         </div>
       </section>
       <section class="video">
@@ -106,7 +128,7 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__item page-footer__item--logo">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Logotype">
+          <img src="img/logo-footer.svg" width="102" height="34" alt="Logotype">
         </div>
         <div class="page-footer__item page-footer__item--social">
           <div class="page-footer__social-wrap">
@@ -118,7 +140,7 @@
         <div class="page-footer__item page-footer__item--dev">
           <a class="page-footer__dev-link" href="https://htmlacademy.ru/">
             <span>Разработано</span>
-            <img src="img/logo-htmlacademy.svg" width="" height="" alt="htmlacademylogo">
+            <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademylogo">
           </a>
         </div>
       </div>
@@ -130,9 +152,12 @@
           <h2 class="modal__order-title">Добавить в корзину</h2>
           <span class="modal__order-select">Выберите размер:</span>
           <div class="modal__order-group">
-            <label class="modal__order-lable">S<input class="modal__order-size" type="radio" id="modal-1" name="size" checked></label>
-            <label class="modal__order-lable">M<input class="modal__order-size" type="radio" id="modal-2" name="size"></label>
-            <label class="modal__order-lable">L<input class="modal__order-size" type="radio" id="modal-3" name="size"></label>
+            <input class="modal__order-size" type="radio" name="size" id="modal-1" value="S">
+            <label class="modal__order-lable" for="modal-1">S</label>
+            <input class="modal__order-size" type="radio" name="size" id="modal-2" value="M">
+            <label class="modal__order-lable" for="modal-2">M</label>
+            <input class="modal__order-size" type="radio" name="size" id="modal-3" value="L">
+            <label class="modal__order-lable" for="modal-3">L</label>
           </div>
           <button class="btn btn--modal" type="submit">Добавить</button>
         </form>
