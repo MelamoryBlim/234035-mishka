@@ -6,6 +6,14 @@
 .video__inner-wrap {
   border: 1px solid @video-border;
   box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .video__title-wrap {
@@ -35,13 +43,19 @@
   min-height: 150px;
   width: 260px;
   margin: 0 auto;
+  background-color: @bgcolor;
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 260px;
+
+  @media @retina-mobile {
+    background-image: url("../img/video-mobile@2x.jpg");
+    background-size: 260px;
+  }
 }
 
 .video__block-play {
-  width: 101px;
+  width: 102px;
   height: 77px;
   transition: 0.3s;
 
@@ -80,17 +94,25 @@
   .video__inner-wrap {
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
+  }
+
+  .video__title-wrap {
+    padding: 20px 40px;
   }
 
   .video__block {
     order: -1;
     width: 100%;
     min-height: 455px;
-    background-image: url("../img/video-mobile@1x.jpg");
-    background-size: 658px; // no img for tablet 768px-50-50
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: 668px;
     background-position: center;
     margin-bottom: 15px;
+
+    @media @retina-tablet {
+      background-image: url("../img/video-tablet@2x.jpg");
+      background-size: 668px;
+    }
   }
 
   .video__title-img {
@@ -98,8 +120,8 @@
   }
 
   .video__desc-wrap {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .video__title-text {
@@ -125,7 +147,7 @@
   .video__inner {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
     position: relative;
   }
 
@@ -135,14 +157,7 @@
     padding-left: 75px;
     padding-right: 60px;
     box-sizing: border-box;
-
-    &:hover {
-      box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.1);
-    }
-
-    &:active {
-      box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
-    }
+    font-size: 0;
   }
 
   .video__title-text {
@@ -156,6 +171,13 @@
     left: 0;
     width: 65%;
     height: 455px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: 682px;
+
+    @media @retina-desktop {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-size: 682px;
+    }
   }
 
   .video__desc-wrap {

@@ -11,7 +11,7 @@
   font-weight: 400;
   line-height: 24px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .order__category-inner {
@@ -69,10 +69,28 @@
 
   &--tel {
     margin-bottom: 32px;
+    position: relative;
+  }
+
+  &--tel svg {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 25px;
+    height: 24px;
   }
 
   &--email {
     margin-bottom: 30px;
+    position: relative;
+  }
+
+  &--email svg {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 32px;
+    height: 25px;
   }
 
   &--extra {
@@ -110,6 +128,14 @@
   outline: 0;
   border-bottom: 2px solid @order-border;
   background-color: transparent;
+
+  &--tel {
+    padding-right: 45px;
+  }
+
+  &--email {
+    padding-right: 45px;
+  }
 
   &--extra {
     border: 2px solid @order-border;
@@ -190,9 +216,19 @@
   background-color: @order-category;
 }
 
+.order__field + svg {
+  opacity: 0.2;
+}
+
+.order__field:hover + svg,
+.order__field:focus + svg {
+  fill: #62d1ba;
+  opacity: 1;
+}
+
 @media @tablet-width {
   .order {
-    margin-top: 70px;
+    margin-top: 65px;
   }
 
   .order__category {
@@ -217,7 +253,7 @@
 
     &--extra {
       padding-top: 50px;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
     }
   }
 
@@ -281,8 +317,18 @@
       margin-bottom: 20px;
     }
 
+    &--tel svg {
+      top: 10px;
+      right: 25px;
+    }
+
     &--email {
       width: 75%;
+    }
+
+    &--email svg {
+      top: 10px;
+      right: 25px;
     }
   }
 
@@ -338,7 +384,7 @@
 
 @media @desktop-width {
   .order {
-    margin-top: 130px;
+    margin-top: 128px;
     margin-bottom: 40px;
   }
 
@@ -354,6 +400,14 @@
     &--color {
       width: 175/1050*100%;
     }
+  }
+
+  .order__list--tel svg {
+    right: 5px;
+  }
+
+  .order__list--email svg {
+    right: 5px;
   }
 
   .order__list--color {
