@@ -59,7 +59,7 @@
 .main-nav__link--search svg {
   position: absolute;
   top: 33px;
-  left: 30px;
+  left: 33px;
   width: 18px;
   height: 19px;
   opacity: 0.2;
@@ -69,7 +69,7 @@
 .main-nav__link--basket svg {
   position: absolute;
   top: 33px;
-  left: 30px;
+  left: 31px;
   width: 21px;
   height: 18px;
   opacity: 0.2;
@@ -109,21 +109,32 @@
   top: 0;
   right: 0;
   width: 20px;
-  height: 14px;
-  background: url("../img/icon-menu-open.svg") no-repeat;
+  height: 2px;
   transition: 0.3s;
+  background-color: @link;
+  box-shadow: 0 6px 0 0 @link,
+              0 12px 0 0 @link;
 }
 
-.main-nav__toggle--opened::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  background: url("../img/icon-menu-close.svg") no-repeat;
-  transition: 0.3s;
-  box-shadow: none;
+.main-nav__toggle--opened {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 22px;
+    height: 2px;
+    background-color: @link;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 @media @tablet-width {

@@ -4,15 +4,15 @@
   justify-content: space-between;
   background-color: @content-bg;
   margin-bottom: 20px;
-  min-height: 175px;
+  min-height: 177px;
 }
 
 .content--index {
   background: @content-bg url("../img/hero-mobile@1x.jpg") no-repeat top center;
   margin-top: -18px;
-  overflow-x: hidden;
-  min-height: 486px;
-  padding-top: 20px;
+  overflow: hidden;
+  min-height: 488px;
+  padding-top: 18px;
 
   @media @retina-mobile {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -34,16 +34,18 @@
   text-align: center;
   word-wrap: break-word;
   flex-grow: 1;
-  padding: 48px 0;
+  padding: 48px 30px;
 }
 
 .content__type {
   margin: 0;
   padding: 0;
+  min-height: 108px;
+  margin-top: 51px;
 }
 
 .content__item {
-  .container();
+  padding: 0 30px;
   display: flex;
   min-height: 103px;
   align-items: center;
@@ -60,7 +62,7 @@
 
   & svg {
     position: absolute;
-    right: 30/320*100%+3px;
+    right: 30px;
     top: 22px;
     width: 41px;
     height: 62px;
@@ -121,7 +123,7 @@
     position: relative;
     margin: 0;
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     overflow: hidden;
 
     &::after {
@@ -143,7 +145,7 @@
     padding-left: 50px;
     padding-right: 50px;
     min-height: 688px;
-    padding-top: 56px;
+    padding-top: 58px;
 
     @media @retina-tablet {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -157,13 +159,14 @@
     justify-content: space-between;
     align-items: flex-end;
     min-height: 124px;
+    margin-top: 283px;
   }
 
   .content__title {
     font-size: 43px;
     font-weight: bold;
     line-height: 50px;
-    margin-top: 50px;
+    margin-top: 48px;
 
     & br:first-of-type {
       display: none;
@@ -176,13 +179,12 @@
     font-weight: bold;
     line-height: 30px;
     min-height: 119px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 0 35px;
   }
 
   .content__item--interior {
-    &::after {
-      top: 30px;
+    & svg {
+      right: 35px;
     }
 
     &:hover {
@@ -195,8 +197,8 @@
   }
 
   .content__item--toys {
-    &::after {
-      top: 30px;
+    & svg {
+      right: 35px;
     }
 
     &:hover {
@@ -235,12 +237,16 @@
 
 @media @desktop-width {
   .content {
-    margin-bottom: 75px;
+    margin-bottom: 73px;
 
     &::after {
       height: 34px;
       bottom: -19px;
     }
+  }
+
+  .content__type {
+    margin-top: 261px;
   }
 
   .content--index {
@@ -249,18 +255,6 @@
     @media @retina-desktop {
       background-image: url("../img/hero-desktop@2x.jpg");
       background-size: auto 746px;
-    }
-  }
-
-  .content__item--interior {
-    &::after {
-      right: 50/1150*100%+3px;
-    }
-  }
-
-  .content__item--toys {
-    &::after {
-      right: 50/1150*100%+3px;
     }
   }
 
