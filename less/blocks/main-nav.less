@@ -44,8 +44,8 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
-  position: relative;
   margin: 0;
+  position: relative;
 
   &:hover {
     color: @link-hover;
@@ -56,26 +56,35 @@
   }
 }
 
-.main-nav__link--search::after {
-  content: "";
+.main-nav__link--search svg {
   position: absolute;
   top: 33px;
   left: 30px;
   width: 18px;
   height: 19px;
-  background: url("../img/icon-search.svg") no-repeat;
   opacity: 0.2;
+  fill: #231F20;
 }
 
-.main-nav__link--basket::after {
-  content: "";
+.main-nav__link--basket svg {
   position: absolute;
   top: 33px;
   left: 30px;
   width: 21px;
   height: 18px;
-  background: url("../img/icon-cart.svg") no-repeat;
   opacity: 0.2;
+  fill: #231F20;
+}
+
+.main-nav__link--search:hover svg,
+.main-nav__link--basket:hover svg {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
+.main-nav__link--search:active svg,
+.main-nav__link--basket:active svg {
+  opacity: 0.3;
 }
 
 .main-nav__toggle {

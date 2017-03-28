@@ -58,16 +58,14 @@
   background-color: @content-item-bg;
   position: relative;
 
-  &::after {
+  & svg {
     position: absolute;
-    content: "";
     right: 30/320*100%+3px;
     top: 22px;
     width: 41px;
     height: 62px;
-    background-image: url("../img/icon-interior.svg");
-    background-repeat: no-repeat;
     opacity: 0.5;
+    fill: #149080;
   }
 
   &:hover {
@@ -80,30 +78,20 @@
     min-height: 108px;
     color: @content-item-font-active;
   }
-
-  &:hover::after {
-    opacity: 0.7;
-  }
-
-  &:active::after {
-    opacity: 0.3;
-  }
 }
 
 .content__item--toys {
   background-color: @content-item-bg2;
   position: relative;
 
-  &::after {
+  & svg {
     position: absolute;
-    content: "";
     right: 30/320*100%;
     top: 22px;
     width: 61px;
     height: 61px;
-    background-image: url("../img/icon-toy.svg");
-    background-repeat: no-repeat;
     opacity: 0.5;
+    fill: #149080;
   }
 
   &:hover {
@@ -116,14 +104,16 @@
     min-height: 108px;
     color: @content-item-font-active;
   }
+}
 
-  &:hover::after {
-    opacity: 0.7;
-  }
+.content__item--interior:hover svg,
+.content__item--toys:hover svg {
+  opacity: 0.7;
+}
 
-  &:active::after {
-    opacity: 0.3;
-  }
+.content__item--interior:active svg,
+.content__item--toys:active svg {
+  opacity: 0.3;
 }
 
 @media @tablet-width {
@@ -166,6 +156,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    min-height: 124px;
   }
 
   .content__title {

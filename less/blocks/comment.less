@@ -82,30 +82,6 @@
   &:active {
     opacity: 0.3;
   }
-
-  &--prev::after {
-    content: "";
-    position: absolute;
-    width: 56px;
-    height: 26px;
-    left: 50%;
-    top: 25%;
-    transform: translateX(-50%);
-    background-color: @link;
-    background: url("../img/icon-left-arrow.svg") no-repeat;
-  }
-
-  &--next::after {
-    content: "";
-    position: absolute;
-    width: 56px;
-    height: 26px;
-    left: 50%;
-    top: 25%;
-    transform: translateX(-50%);
-    background-color: @link;
-    background: url("../img/icon-right-arrow.svg") no-repeat;
-  }
 }
 
 @media @tablet-width {

@@ -72,16 +72,12 @@
     position: relative;
   }
 
-  &--tel::after {
+  &--tel svg {
     position: absolute;
-    content: "";
     top: 7px;
     right: 7px;
     width: 25px;
     height: 24px;
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    opacity: 0.2;
   }
 
   &--email {
@@ -89,16 +85,12 @@
     position: relative;
   }
 
-  &--email::after {
+  &--email svg {
     position: absolute;
-    content: "";
     top: 7px;
     right: 7px;
     width: 32px;
     height: 25px;
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    opacity: 0.2;
   }
 
   &--extra {
@@ -222,6 +214,16 @@
 
 .order__input--radio:checked + .order__label--type::before {
   background-color: @order-category;
+}
+
+.order__field + svg {
+  opacity: 0.2;
+}
+
+.order__field:hover + svg,
+.order__field:focus + svg {
+  fill: #62d1ba;
+  opacity: 1;
 }
 
 @media @tablet-width {
