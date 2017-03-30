@@ -23,8 +23,9 @@
   },
   "scripts": {
     "test": "editorconfig-cli",
-    "build": "gulp build && gulp serve",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "gulp serve",
+    "dev": "gulp build && gulp serve"
   },
   "editorconfig-cli": [
     "*.html",

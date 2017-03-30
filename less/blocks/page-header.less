@@ -1,20 +1,26 @@
 .page-header {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
-  min-height: 78px;
   background-color: @bgcolor;
   border-top: 1px solid @menu-item-border;
-  border-bottom: 1px solid @menu-item-border;
 }
 
 .page-header__logo {
   margin: 0;
   padding: 0;
   font-size: 0;
+  text-align: center;
+  min-height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid @menu-item-border;
+  width: 100%;
 
   & img:hover {
     opacity: 0.6;
@@ -30,12 +36,16 @@
   .page-header {
     border-top: none;
     min-height: 88px;
+    border-bottom: 1px solid @menu-item-border;
   }
 
   .page-header__logo {
     position: absolute;
     z-index: 10;
     top: 22px;
+    border-bottom: none;
+    width: auto;
+    display: block;
 
     left: 50/768*100%;
 
