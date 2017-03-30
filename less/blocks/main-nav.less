@@ -154,7 +154,6 @@
   .main-nav__list {
     display: flex;
     flex-direction: row;
-    align-items: center;
     position: absolute;
     top: 100%;
     left: 50px;
@@ -168,8 +167,13 @@
     justify-content: flex-end;
   }
 
+  .main-nav__item {
+    display: flex;
+  }
+
   .main-nav__link {
     border: none;
+    word-wrap: break-word;
   }
 
   .main-nav__link--catalog {
@@ -202,6 +206,7 @@
   .main-nav__link--basket {
     padding: 32px 50px 32px 83px;
     border-left: 1px solid @menu-item-border;
+    width: 182px;
   }
 }
 
