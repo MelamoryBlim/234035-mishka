@@ -1,13 +1,17 @@
 .page-header {
+  border-top: 1px solid @menu-item-border;
+}
+
+.page-header__inner {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background-color: @bgcolor;
-  border-top: 1px solid @menu-item-border;
+  max-width: @max-width;
 }
 
 .page-header__logo {
@@ -34,9 +38,12 @@
 
 @media @tablet-width {
   .page-header {
+    border-bottom: 1px solid @menu-item-border;
+  }
+
+  .page-header__inner {
     border-top: none;
     min-height: 88px;
-    border-bottom: 1px solid @menu-item-border;
   }
 
   .page-header__logo {
@@ -46,7 +53,6 @@
     border-bottom: none;
     width: auto;
     display: block;
-
     left: 50/768*100%;
 
     & img {

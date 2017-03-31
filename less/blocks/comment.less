@@ -1,10 +1,15 @@
 .comment {
-  .container();
   margin-bottom: 45px;
 }
 
 .comment__inner {
   margin-bottom: 40px;
+  max-width: @max-width;
+  margin: 0 auto;
+}
+
+.comment__wrap {
+  .container();
 }
 
 .comment__title {
@@ -85,7 +90,7 @@
 }
 
 @media @tablet-width {
-  .comment {
+  .comment__inner {
     background-color: @bgcolor;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -98,7 +103,7 @@
     }
   }
 
-  .comment__inner {
+  .comment__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -155,7 +160,7 @@
 }
 
 @media @desktop-width {
-  .comment {
+  .comment__inner {
     background-position: 50px 0;
     background-size: contain;
     margin-bottom: 70px;
@@ -165,7 +170,7 @@
     }
   }
 
-  .comment__inner {
+  .comment__wrap {
     padding-top: 70px;
   }
 

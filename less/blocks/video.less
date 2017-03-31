@@ -1,6 +1,16 @@
 .video {
   margin-bottom: 60px;
+}
+
+.video__inner {
   .container();
+  max-width: @max-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.video__wrap {
+  margin: 0 auto;
 }
 
 .video__inner-wrap {
@@ -144,7 +154,7 @@
 }
 
 @media @desktop-width {
-  .video__inner {
+  .video__wrap {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 100px;
@@ -171,6 +181,7 @@
     left: 0;
     width: 65%;
     height: 455px;
+    background-color: @video-border;
     background-image: url("../img/video-desktop@1x.jpg");
     background-size: 682px;
 
