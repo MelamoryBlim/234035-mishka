@@ -40,8 +40,11 @@
 .content__type {
   margin: 0;
   padding: 0;
-  min-height: 108px;
-  margin-top: 51px;
+  min-height: 211px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 46px;
 }
 
 .content__item {
@@ -62,7 +65,7 @@
 
   & svg {
     position: absolute;
-    right: 30px;
+    right: 40px;
     top: 22px;
     width: 41px;
     height: 62px;
@@ -88,7 +91,7 @@
 
   & svg {
     position: absolute;
-    right: 30/320*100%;
+    right: 30px;
     top: 22px;
     width: 61px;
     height: 61px;
@@ -232,6 +235,7 @@
   .content__nav-item--catalog,
   .content__nav-item--sale {
     display: none;
+    width: 160px;
   }
 }
 
@@ -276,8 +280,12 @@
 
   .content__nav-item--sale {
     display: flex;
-    flex-grow: 1;
     font-weight: bold;
+  }
+
+  .content__nav-item--delivery {
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 
   .content__nav-link {
