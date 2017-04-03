@@ -51,12 +51,22 @@
   line-height: 16px;
   color: @order-title;
   text-transform: uppercase;
-  padding-right: 20px;
+  position: relative;
+  flex-grow: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 62px;
+    right: 0;
+    height: 1px;
+    background-color: @form-border;
+  }
 }
 
-.order__title-border {
-  flex-grow: 1;
-  border-top: 1px solid @form-border;
+.order__title--email::after {
+  left: 82px;
 }
 
 .order__list {
@@ -274,8 +284,12 @@
     padding-top: 20px;
   }
 
-  .order__title-border {
-    display: none;
+  .order__title {
+    flex-grow: 0;
+
+    &::after {
+      display: none;
+    }
   }
 
   .order__category-inner {
@@ -399,8 +413,10 @@
 
   .order__title-wrap {
     width: 225/1150*100%;
-    justify-content: center;
+    box-sizing: border-box;
+    justify-content: flex-start;
     padding-top: 20px;
+    padding-left: 60px;
 
     &--color {
       width: 175/1050*100%;
